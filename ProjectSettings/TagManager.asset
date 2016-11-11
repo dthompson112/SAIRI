@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Door
+  - Airlock
+  - Enemy
+  - Ship
+  - Background
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - background
+  - Blocking
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3623179029
+    locked: 0
+  - name: Ship
+    uniqueID: 3763381035
+    locked: 0
+  - name: floor
+    uniqueID: 285079883
+    locked: 0
+  - name: blocking
+    uniqueID: 1808641021
+    locked: 0
+  - name: items
+    uniqueID: 3099936481
+    locked: 0
