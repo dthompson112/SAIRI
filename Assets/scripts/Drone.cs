@@ -6,10 +6,12 @@ public class Drone : MonoBehaviour {
 	private Vector3 dronePosition;
 	private bool isSelected = false;
 	public float speed = 1.5f;
+	private Rigidbody2D droneBody;
 
 	void Start () {
 
-		dronePosition = transform.position;	
+		droneBody = GetComponent<Rigidbody2D> ();
+		dronePosition = droneBody.transform.position;
 	}
 
 	void Update () {
@@ -25,10 +27,10 @@ public class Drone : MonoBehaviour {
 		//Gets new position based on mouse position
 		if (Input.GetMouseButton (0) && isSelected == true) {			
 			dronePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			dronePosition.z = transform.position.z;
+			dronePosition.z = droneBody.transform.position.z;
 		}
 
 		//Moves drone
-		transform.position = Vector3.MoveTowards (transform.position, dronePosition, speed * Time.deltaTime);
+		droneBody.MovePosition(Vector3.MoveTowards(droneBody.transform.position, dronePosition, speed * Time.deltaTime));
 	}
 }
