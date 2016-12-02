@@ -53,7 +53,7 @@ public class Doors : MonoBehaviour {
 	//Opens the door if the drone tries to move through collision
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.name == "Drone2" && doorOpen == false) {
+		if (other.tag == "Player" && doorOpen == false) {
 			door_position ();
 		}
 	}
@@ -61,7 +61,7 @@ public class Doors : MonoBehaviour {
 	//Closes the door if the drone leaves collision
 	public void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.name == "Drone2" && doorOpen == true) {
+		if (other.tag == "Player" && doorOpen == true) {
 			door_position ();
 		}
 	}

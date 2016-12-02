@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Doors.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ModalWindow.cs">
     <Files>
       <File FileName="Assets\scripts\BringToFront.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\ModalPanel.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Game.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Drone.cs" Line="16" Column="2" />
-      <File FileName="Assets\scripts\Doors.cs" Line="67" Column="3" />
-      <File FileName="Assets\scripts\TestModalWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Drone.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Doors.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ModalWindow.cs" Line="14" Column="1" />
+      <File FileName="Assets\scripts\Loader.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GameManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
