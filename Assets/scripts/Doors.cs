@@ -34,7 +34,7 @@ public class Doors : MonoBehaviour {
 
 	public static void toggle_doors_on_click(GameObject door){
 
-		Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //get mouse position
+		/**Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //get mouse position
 		Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition); //check if the mouse is over a collider
 		
 		//Debug.Log("mouse pos "+mousePosition.x+" y "+mousePosition.y+" ");    
@@ -47,7 +47,7 @@ public class Doors : MonoBehaviour {
 				door = GameObject.Find (hit); //create a door object using the name
 				door.GetComponent<Doors>().door_position(); //change the door position
 			}
-		}
+		}*/
 	}
 
 	//Opens the door if the drone tries to move through collision

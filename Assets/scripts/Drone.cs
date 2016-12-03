@@ -8,7 +8,7 @@ public class Drone : MonoBehaviour {
 	private float speed;
 	private Rigidbody2D droneBody;
 
-	enum QuestState{Initial, None, Frank, Mark, Life_Support_System, Zephyr, Shield, Engine};
+	enum QuestState{Initial, None, Frank, Mark, Life_Support_System, Zephyr, Shield, Engine, Turret, Shultz, Bar, Junkbox, Toolbox, Damage, Cornelius, Footlocker, Cornlocker};
 	QuestState questState;
 	private int[] branches;
 
@@ -19,7 +19,7 @@ public class Drone : MonoBehaviour {
 		playerHasControl = false;
 		speed = 1.5f;
 		questState = QuestState.Initial;
-		branches = new int[8];
+		branches = new int[17];
 		for (int i = 0; i < branches.Length; i++) {
 			branches [i] = 1;
 		}
@@ -43,8 +43,7 @@ public class Drone : MonoBehaviour {
 		}
 	}
 
-	public void OnTriggerEnter2D(Collider2D other)
-	{
+	public void OnTriggerEnter2D(Collider2D other) {
 		if (other.name == "Frank") {
 			questState = QuestState.Frank;
 		} else if (other.name == "Mark") {
@@ -57,7 +56,27 @@ public class Drone : MonoBehaviour {
 			questState = QuestState.Shield;
 		} else if (other.name == "Engine") {
 			questState = QuestState.Engine;
-	}
+		} else if (other.name == "Turret") {
+			questState = QuestState.Turret;
+		} else if (other.name == "Shultz") {
+			questState = QuestState.Shultz;
+		} else if (other.name == "Bar") {
+			questState = QuestState.Bar;
+		} else if (other.name == "Crate 1" || other.name == "Crate 2" || other.name == "Crate 3") {
+			questState = QuestState.Junkbox;
+		} else if (other.name == "Crate 4") {
+			questState = QuestState.Toolbox;
+		} else if (other.name == "Damage") {
+			questState = QuestState.Damage;
+		} else if (other.name == "Locker 4") {
+			questState = QuestState.Cornlocker;
+		} else if (other.name == "Cornelius") {
+			questState = QuestState.Cornelius;
+		} else if (other.name == "Locker 1" || other.name == "Locker 2" || other.name == "Locker 3" || other.name == "Locker 5" || other.name == "Locker 6") {
+			questState = QuestState.Footlocker;
+		} else if (other.name == "Dpad") {
+			questState = QuestState.Initial;
+		} 
 	}
 	public void OnTriggerExit2D(Collider2D other)
 	{
