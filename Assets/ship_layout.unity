@@ -1420,6 +1420,10 @@ Prefab:
       propertyPath: m_Text
       value: Choice 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010790851460, guid: 7918ce66fdbb25c4d9c50103fb8d34a9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7918ce66fdbb25c4d9c50103fb8d34a9, type: 2}
   m_IsPrefabParent: 0
@@ -4685,6 +4689,10 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010790851460, guid: 7918ce66fdbb25c4d9c50103fb8d34a9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7918ce66fdbb25c4d9c50103fb8d34a9, type: 2}
