@@ -4,8 +4,11 @@ using UnityEngine.Events;
 using System.Collections;
 
 public class TestModalWindow : MonoBehaviour {
-	private ModalPanel modalPanel;
 
+	public Transform spawnPt;
+	public GameObject spawn;
+
+	private ModalPanel modalPanel;
 	private UnityAction myYesAction;
 	private UnityAction myNoAction;
 	private UnityAction myCancelAction;
@@ -15,11 +18,11 @@ public class TestModalWindow : MonoBehaviour {
 
 		myYesAction = new UnityAction (TestYesFunction);
 		myNoAction = new UnityAction (TestNoFunction);
-		myCancelAction = new UnityAction (TestCancelFunction);
+		//myCancelAction = new UnityAction (TestCancelFunction);
 	}
 
 	public void TestYNC(){
-		modalPanel.Choice ("Would you like to interact with this text box?", myYesAction, myNoAction, myCancelAction);
+		modalPanel.Choice ("Would you like to interact with this text box?", myYesAction, myNoAction);
 	}
 
 	//Send to the Modal Panel to set up the Buttons and Functions to call
@@ -30,6 +33,7 @@ public class TestModalWindow : MonoBehaviour {
 	void TestNoFunction(){
 		Debug.Log ("No");
 	}
+
 
 	void TestCancelFunction(){
 		Debug.Log ("Cancel");
