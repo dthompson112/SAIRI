@@ -14,8 +14,6 @@ public class ModalPanel: MonoBehaviour {
 
 	private static ModalPanel modalPanel;
 
-
-
 	public static ModalPanel Instance(){
 		if (!modalPanel) {
 			modalPanel = FindObjectOfType (typeof(ModalPanel)) as ModalPanel;
@@ -48,28 +46,33 @@ public class ModalPanel: MonoBehaviour {
 	//unity action is a pointer funtion
 	public void Choice(string question, UnityAction yesEvent, UnityAction noEvent, UnityAction cancelEvent){
 		modalPanelObject.SetActive (true); //makes the panel apear
+
+		yesButton.GetComponentInChildren<Text>().text = "1";
 		yesButton.onClick.RemoveAllListeners(); //prevent previouse events from affecting current clicks
 		yesButton.onClick.AddListener(yesEvent); //add yes event to onclick
-		yesButton.onClick.AddListener (ClosePanel); //add close panel event to onclick//calls ClosePanel fuction
 
+		this.noButton.GetComponentInChildren<Text>().text = "3";
 		noButton.onClick.RemoveAllListeners();
 		noButton.onClick.AddListener (noEvent);
-		noButton.onClick.AddListener (ClosePanel);
 
+		this.cancelButton.GetComponentInChildren<Text>().text = "2";
 		cancelButton.onClick.RemoveAllListeners ();
 		cancelButton.onClick.AddListener (cancelEvent);
-		cancelButton.onClick.AddListener (ClosePanel);
+
 
 		this.question.text = question;
 		this.iconImage.gameObject.SetActive (false);
 		yesButton.gameObject.SetActive (true);
-		noButton.gameObject.SetActive (true);
+		noButton.gameObject.SetActive (false);
 		cancelButton.gameObject.SetActive (true);
 
-
+		
 	}
 
-	void ClosePanel(){
+	public void ClosePanel(){
+		yesButton.onClick.AddListener (ClosePanel); //add close panel event to onclick//calls ClosePanel fuction
+		noButton.onClick.AddListener (ClosePanel);
+		cancelButton.onClick.AddListener (ClosePanel);
 		modalPanelObject.SetActive (false);
 	}
 }

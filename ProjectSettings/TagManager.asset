@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Ship
   - Background
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -60,4 +61,7 @@ TagManager:
     locked: 0
   - name: items
     uniqueID: 3099936481
+    locked: 0
+  - name: Player
+    uniqueID: 786502217
     locked: 0
