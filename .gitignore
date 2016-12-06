@@ -68,6 +68,9 @@ ExportedObj/
 *.booproj
 *.svd
 
+# Vim Swap Files
+*~
+
 
 # Unity3D generated meta files
 *.pidb.meta
