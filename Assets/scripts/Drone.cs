@@ -17,7 +17,7 @@ public class Drone : MonoBehaviour {
 		droneBody = GetComponent<Rigidbody2D> ();
 		dronePosition = droneBody.transform.position;
 		playerHasControl = false;
-		speed = 1.5f;
+		speed = 8.5f;
 		questState = QuestState.Initial;
 		branches = new int[17];
 		for (int i = 0; i < branches.Length; i++) {
@@ -28,14 +28,14 @@ public class Drone : MonoBehaviour {
 	void Update () {
 
 		//Gets new position based on mouse position
-		if (Input.GetMouseButton (0) && playerHasControl == true) {	
+		if (Input.GetMouseButton (0) && playerHasControl == true) {
 
 				dronePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				dronePosition.z = droneBody.transform.position.z;
 
 			if (dronePosition.x < -4.3f || dronePosition.x > 3.9f || dronePosition.y < -4.9f || dronePosition.y > 5f) {
-				droneBody.MovePosition(Vector3.MoveTowards(droneBody.position, droneBody.position, 0));			
-			} 
+				droneBody.MovePosition(Vector3.MoveTowards(droneBody.position, droneBody.position, 0));
+			}
 			else {
 				//Moves drone
 				droneBody.MovePosition (Vector3.MoveTowards (droneBody.transform.position, dronePosition, speed * Time.deltaTime));
@@ -76,7 +76,7 @@ public class Drone : MonoBehaviour {
 			questState = QuestState.Footlocker;
 		} else if (other.name == "Dpad") {
 			questState = QuestState.Initial;
-		} 
+		}
 	}
 	public void OnTriggerExit2D(Collider2D other)
 	{
