@@ -11,10 +11,9 @@ public class MenuController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey("escape"))
-            Application.Quit();
+		//if (Input.GetKey("escape"))
+			//Application.Quit();
 	}
-
 	// starts the game from the start menu
 	public void startButton () {
 		SceneManager.LoadScene(1);
